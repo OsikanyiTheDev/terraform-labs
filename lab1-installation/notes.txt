@@ -1,0 +1,100 @@
+# 📘 Terraform Lab 1 Notes - Installation & Setup
+
+Terraform is an Infrastructure as Code (IaC) tool used to build, change, and manage infrastructure using code instead of manual processes.
+
+---
+
+## 🧠 Key Concepts
+
+### 1. Infrastructure as Code (IaC)
+
+IaC means defining infrastructure (servers, networks, databases) using code instead of clicking in a cloud dashboard.
+
+Benefits:
+
+* Repeatable
+* Scalable
+* Version-controlled
+* Less human error
+
+---
+
+### 2. Terraform
+
+Terraform is a tool created by HashiCorp that allows you to automate infrastructure creation across different platforms like AWS, Azure, GCP, Docker, and more.
+
+---
+
+### 3. Terraform Workflow
+
+```text
+terraform init   → initializes project and downloads providers  
+terraform plan   → shows what will be created/changed  
+terraform apply  → creates infrastructure  
+terraform destroy → removes infrastructure  
+```
+
+---
+
+### 4. Core Terraform Components
+
+#### Provider
+
+A provider is the plugin that connects Terraform to a platform (e.g., AWS, Docker, local machine).
+
+Example:
+
+* AWS Provider → manages AWS resources
+* Docker Provider → manages containers
+
+---
+
+#### Resource
+
+A resource is anything Terraform creates.
+
+Examples:
+
+* Virtual machine
+* File
+* Network
+* Container
+
+---
+
+#### State
+
+Terraform stores information about created infrastructure in a **state file** (`terraform.tfstate`).
+
+This allows Terraform to:
+
+* Track what exists
+* Detect changes
+* Prevent duplication
+
+---
+
+## 🛠️ Commands Used in Lab 1
+
+```bash
+terraform version
+git init
+mkdir lab1-installation
+cd lab1-installation
+```
+
+---
+
+## 📌 Environment Setup
+
+* Terraform installed successfully (v1.15.6)
+* Git repository initialized
+* Project folder structure created
+
+---
+
+## 🎯 Key Takeaway
+
+Terraform allows engineers to define infrastructure using code, making cloud environments easier to manage, automate, and reproduce.
+
+
