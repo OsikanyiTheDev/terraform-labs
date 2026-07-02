@@ -1,34 +1,54 @@
 # Terraform Lab 6 - Modules
 
-## Objective
+## 🎯 Objective
 Learn how to use Terraform modules to create reusable infrastructure components.
 
 ---
 
-## What I Built
-- A reusable Terraform module
-- A root configuration calling multiple modules
-- Multiple file resources created from one module
+## 🧠 What I Learned
+In this lab, I learned how Terraform modules allow us to break infrastructure into reusable components, making code cleaner, scalable, and maintainable.
 
 ---
 
-## Key Concepts
-- Terraform modules
-- Reusability
-- Root vs child modules
-- Infrastructure abstraction
+## 📦 What I Built
+- A reusable Terraform module (`file_creator`)
+- A root module that calls multiple instances of the child module
+- Two files generated using a single module
 
 ---
 
-## Project Structure
-- modules/file_creator
-- main.tf (root module)
+## 🏗️ Project Structure
+
+
+lab6/
+├── main.tf
+├── modules/
+│ └── file_creator/
+│ ├── main.tf
+│ ├── variables.tf
+│ └── outputs.tf
+
 
 ---
 
-## Commands Used
+## ⚙️ Terraform Code Overview
+
+### Root Module (main.tf)
+- Calls the `file_creator` module twice
+- Passes different variables for each instance
+
+### Child Module
+- Creates a local file
+- Accepts filename and content as inputs
+- Outputs the created file name
+
+---
+
+## 🚀 Commands Used
+
 ```bash
 terraform init
 terraform plan
 terraform apply
 terraform destroy
+```
