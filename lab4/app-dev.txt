@@ -1,0 +1,1 @@
+Hello from Terraform Lab 4 | Environment: dev
