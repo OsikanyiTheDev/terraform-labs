@@ -1,16 +1,92 @@
-# Terraform
+########################################
+# TERRAFORM CORE
+########################################
+
 .terraform/
 *.tfstate
 *.tfstate.*
-*.tfvars
+terraform.tfstate
+terraform.tfstate.backup
 crash.log
+
+# Terraform CLI configs
 .terraform.lock.hcl
+.terraformrc
+terraform.rc
 
-# Linux
-*.swp
+# Override files (rare but possible)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 
-# VS Code
+########################################
+# TERRAFORM VARIABLES (SENSITIVE)
+########################################
+
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+
+# Allow example files (safe to commit)
+!terraform.tfvars.example
+
+########################################
+# AWS / CLOUD CREDENTIALS
+########################################
+
+*.pem
+*.key
+*.p12
+*.crt
+
+# AWS CLI credentials (if accidentally inside repo)
+.aws/
+credentials
+config
+
+########################################
+# SSH KEYS (LABS)
+########################################
+
+lab*-key*
+key-*
+*.pub
+
+########################################
+# LOCAL ENVIRONMENTS
+########################################
+
+.env
+.env.*
+venv/
+__pycache__/
+
+########################################
+# IDE / EDITORS
+########################################
+
 .vscode/
+.idea/
+*.swp
+*.swo
 
-# OS files
+########################################
+# OS FILES
+########################################
+
 .DS_Store
+Thumbs.db
+
+########################################
+# LOGS
+########################################
+
+*.log
+logs/
+
+########################################
+# BACKUPS (TERRAFORM / SYSTEM)
+########################################
+
+*.backup
